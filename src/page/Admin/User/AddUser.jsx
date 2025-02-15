@@ -1,3 +1,4 @@
+import { Select } from "antd";
 import { useState } from "react";
 
 const AddUser = ({ onClose }) => {
@@ -42,7 +43,7 @@ const AddUser = ({ onClose }) => {
 
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
-      <div className="bg-slate-800 text-white p-4 rounded-lg w-[400px] max-h-[500px] shadow-lg overflow-auto">
+      <div className="bg-[#182237] text-white p-4 rounded-lg w-[400px] max-h-[500px] shadow-lg overflow-auto">
         <h2 className="text-xl font-semibold mb-3">Add new user</h2>
 
         <form onSubmit={handleSubmit}>
@@ -54,7 +55,7 @@ const AddUser = ({ onClose }) => {
               name="username"
               value={formData.username}
               onChange={handleChange}
-              className="w-[180px] p-1 border bg-slate-800 rounded text-white focus:ring focus:ring-blue-500"
+              className="w-[180px] p-1 border bg-[#182237] rounded text-white focus:ring focus:ring-blue-500"
               required
             />
             {errors.username && <p className="text-red-500 text-xs">{errors.username}</p>}
@@ -68,7 +69,7 @@ const AddUser = ({ onClose }) => {
               name="password"
               value={formData.password}
               onChange={handleChange}
-              className="w-full p-1 border rounded bg-slate-800 text-white focus:ring focus:ring-blue-500"
+              className="w-full p-1 border rounded bg-[#182237] text-white focus:ring focus:ring-blue-500"
               required
             />
           </div>
@@ -77,13 +78,17 @@ const AddUser = ({ onClose }) => {
           <div className="flex gap-2 mb-3">
             <div className="w-1/2">
               <label className="block text-sm">Role</label>
-              <input
-                type="text"
-                name="role"
-                value={formData.role}
-                onChange={handleChange}
-                className="w-full p-1 border rounded bg-slate-800 text-white focus:ring focus:ring-blue-500"
-              />
+              <select
+              name="type"
+              value={formData.type}
+              onChange={handleChange}
+              className="w-full p-1 border rounded bg-[#182237] text-white focus:ring focus:ring-blue-500"
+              required
+            >
+              <option value="">Choose</option>
+              <option value="Admin">Admin</option>
+              <option value="User">User</option>
+            </select>
             </div>
             <div className="w-1/2">
               <label className="block text-sm">Phone number</label>
@@ -92,7 +97,7 @@ const AddUser = ({ onClose }) => {
                 name="phone"
                 value={formData.phone}
                 onChange={handleChange}
-                className="w-full p-1 border rounded bg-slate-800 text-white focus:ring focus:ring-blue-500"
+                className="w-full p-1 border rounded bg-[#182237] text-white focus:ring focus:ring-blue-500"
               />
             </div>
           </div>
@@ -105,7 +110,7 @@ const AddUser = ({ onClose }) => {
               name="email"
               value={formData.email}
               onChange={handleChange}
-              className="w-full p-1 border rounded bg-slate-800 text-white focus:ring focus:ring-blue-500"
+              className="w-full p-1 border rounded bg-[#182237] text-white focus:ring focus:ring-blue-500"
               required
             />
             {errors.email && <p className="text-red-500 text-xs">{errors.email}</p>}
@@ -119,7 +124,7 @@ const AddUser = ({ onClose }) => {
               name="address"
               value={formData.address}
               onChange={handleChange}
-              className="w-full p-1 border rounded bg-slate-800 text-white focus:ring focus:ring-blue-500"
+              className="w-full p-1 border rounded bg-[#182237] text-white focus:ring focus:ring-blue-500"
             />
           </div>
 

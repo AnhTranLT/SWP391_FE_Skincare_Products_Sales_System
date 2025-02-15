@@ -30,7 +30,7 @@ const AddProduct = ({ onClose }) => {
 
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
-      <div className="bg-slate-800 text-white p-4 rounded-lg w-[400px] max-h-[500px] shadow-lg overflow-auto">
+      <div className="bg-[#182237] text-white p-4 rounded-lg w-[400px] max-h-[500px] shadow-lg overflow-auto">
         <h2 className="text-xl font-semibold mb-3">Product Add</h2>
 
         <form onSubmit={handleSubmit} className="space-y-2">
@@ -42,7 +42,7 @@ const AddProduct = ({ onClose }) => {
               name="name"
               value={formData.name}
               onChange={handleChange}
-              className="w-[500px] p-1 border bg-slate-800 rounded text-white focus:ring focus:ring-blue-500"
+              className="w-[500px] p-1 border bg-[#182237] rounded text-white focus:ring focus:ring-blue-500"
               required
             />
           </div>
@@ -54,7 +54,7 @@ const AddProduct = ({ onClose }) => {
               name="type"
               value={formData.type}
               onChange={handleChange}
-              className="w-[500px] p-1 border bg-slate-800 rounded text-white focus:ring focus:ring-blue-500"
+              className="w-[500px] p-1 border bg-[#182237] rounded text-white focus:ring focus:ring-blue-500"
               required
             >
               <option value="">Choose</option>
@@ -71,7 +71,7 @@ const AddProduct = ({ onClose }) => {
               name="price"
               value={formData.price}
               onChange={handleChange}
-              className="w-[500px] p-1 border bg-slate-800 rounded text-white focus:ring focus:ring-blue-500"
+              className="w-[500px] p-1 border bg-[#182237] rounded text-white focus:ring focus:ring-blue-500"
               required
             />
           </div>
@@ -106,7 +106,7 @@ const AddProduct = ({ onClose }) => {
               value={formData.description}
               onChange={handleChange}
               rows="3"
-              className="w-full p-1 border rounded bg-slate-800 text-white focus:ring focus:ring-blue-500"
+              className="w-full p-1 border rounded bg-[#182237] text-white focus:ring focus:ring-blue-500"
             ></textarea>
           </div>
 
@@ -118,7 +118,7 @@ const AddProduct = ({ onClose }) => {
               name="imageUrl"
               value={formData.imageUrl}
               onChange={handleChange}
-              className="w-full p-1 border rounded bg-slate-800 text-white focus:ring focus:ring-blue-500"
+              className="w-full p-1 border rounded bg-[#182237] text-white focus:ring focus:ring-blue-500"
             />
           </div>
 
