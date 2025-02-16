@@ -21,13 +21,11 @@ const AddUser = ({ onClose }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     let newErrors = {};
-
-    // Kiểm tra username đã tồn tại
+  
     if (formData.username === "admin") {
       newErrors.username = "User name is already exist";
     }
 
-    // Kiểm tra email đã tồn tại
     if (formData.email === "adminadmin@gmail.com") {
       newErrors.email = "Email is already in use";
     }

@@ -17,7 +17,7 @@ const AddProduct = ({ onClose }) => {
   const handleQuantityChange = (amount) => {
     setFormData((prev) => ({
       ...prev,
-      quantity: Math.max(1, prev.quantity + amount), //số lượng k nhỏnhỏ 1
+      quantity: Math.max(1, prev.quantity + amount), //số lượng k nhoo 1
     }));
   };
 
